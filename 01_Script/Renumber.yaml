@@ -1,0 +1,4 @@
+job: geometry
+geometry: 3uvp_protA.pdb
+geometry_action: pdb_renumber
+geometry_write: Test.pdb

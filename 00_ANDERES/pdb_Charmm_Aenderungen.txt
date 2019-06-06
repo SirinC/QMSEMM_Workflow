@@ -1,0 +1,432 @@
+﻿
+SER - VAL - PRO - GLN - LYS - THR - TYR - GLY
+PHE - ARG - LEU - HIS - ALA - CYS - ASN - TRP 
+ASP - MET - ILE - GLU
+
+##########################################
+___SER:___
+
+ATOM      1  N   SER       
+ATOM      2  HN  SER     H2 -> HN / H -> HN
+ATOM      3  CA  SER      
+ATOM      4  HA  SER    
+ATOM      5  CB  SER   
+ATOM      6  HB1 SER     HB2 -> HB1
+ATOM      7  HB2 SER     HB3 -> HB2
+ATOM      8  OG  SER    
+ATOM      9  HG1 SER     HG -> HG1
+ATOM     10  C   SER 
+ATOM     11  O   SER 
+
+
+###########################################
+___VAL:___
+
+ATOM      1  N   VAL    
+ATOM      2  HN  VAL     H2 -> HN / H -> HN
+ATOM      3  CA  VAL    
+ATOM      4  HA  VAL    
+ATOM      5  CB  VAL    
+ATOM      6  HB  VAL    
+ATOM      7  CG1 VAL    
+ATOM      8 HG11 VAL    
+ATOM      9 HG12 VAL    
+ATOM     10 HG13 VAL    
+ATOM     11  CG2 VAL    
+ATOM     12 HG21 VAL    
+ATOM     13 HG22 VAL    
+ATOM     14 HG23 VAL    
+ATOM     15  C   VAL         
+ATOM     16  O   VAL        
+
+
+###########################################
+___PRO:___
+
+ATOM      1  N   PRO    
+ATOM      2  CD  PRO    
+ATOM      3  HD1 PRO     HD2 -> HD1  
+ATOM      4  HD2 PRO     HD3 -> HD2
+ATOM      5  CA  PRO    
+ATOM      6  HA  PRO    
+ATOM      7  CB  PRO    
+ATOM      8  HB1 PRO     HB2 -> HB1
+ATOM      9  HB2 PRO     HB3 -> HB2
+ATOM     10  CG  PRO    
+ATOM     11  HG1 PRO     HG2 -> HG1
+ATOM     12  HG2 PRO     HG3 -> HG2
+ATOM     13  C   PRO    
+ATOM     14  O   PRO    
+
+###########################################
+___GLN:___
+
+ATOM      1  N   GLN     
+ATOM      2  HN  GLN     H -> HN    
+ATOM      3  CA  GLN     
+ATOM      4  HA  GLN     
+ATOM      5  CB  GLN     
+ATOM      6  HB1 GLN     HB2 -> HB1 
+ATOM      7  HB2 GLN     HB3 -> HB2
+ATOM      8  CG  GLN     
+ATOM      9  HG1 GLN     HG2 -> HG1 
+ATOM     10  HG2 GLN     HG3 -> HG2
+ATOM     11  CD  GLN     
+ATOM     12  OE1 GLN     
+ATOM     13  NE2 GLN     
+ATOM     14 HE21 GLN     
+ATOM     15 HE22 GLN     
+ATOM     16  C   GLN     
+ATOM     17  O   GLN    
+
+
+###########################################
+___LYS:___
+
+ATOM      1  N   LYS    
+ATOM      2  HN  LYS     H -> HN
+ATOM      3  CA  LYS    
+ATOM      4  HA  LYS    
+ATOM      5  CB  LYS    
+ATOM      6  HB1 LYS     HB2 -> HB1
+ATOM      7  HB2 LYS     HB3 -> HB2
+ATOM      8  CG  LYS    
+ATOM      9  HG1 LYS     HG2 -> HG1
+ATOM     10  HG2 LYS     HG3 -> HG2
+ATOM     11  CD  LYS    
+ATOM     12  HD1 LYS     HD2 -> HD1 
+ATOM     13  HD2 LYS     HD3 -> HD2
+ATOM     14  CE  LYS    
+ATOM     15  HE1 LYS     HE2 -> HE1
+ATOM     16  HE2 LYS     HE3 -> HE2
+ATOM     17  NZ  LYS    
+ATOM     18  HZ1 LYS    
+ATOM     19  HZ2 LYS    
+ATOM     20  HZ3 LYS    
+ATOM     21  C   LYS    
+ATOM     22  O   LYS    
+
+###########################################
+___THR:___
+
+ATOM      1  N   THR   
+ATOM      2  HN  THR     H -> HN  
+ATOM      3  CA  THR   
+ATOM      4  HA  THR   
+ATOM      5  CB  THR   
+ATOM      6  HB  THR   
+ATOM      7  OG1 THR   
+ATOM      8  HG1 THR 
+ATOM      9  CG2 THR   
+ATOM     10 HG21 THR   
+ATOM     11 HG22 THR   
+ATOM     12 HG23 THR   
+ATOM     13  C   THR   
+ATOM     14  O   THR  
+
+###########################################
+___TYR:___
+
+ATOM      1  N   TYR    
+ATOM      2  HN  TYR     H -> HN
+ATOM      3  CA  TYR    
+ATOM      4  HA  TYR    
+ATOM      5  CB  TYR    
+ATOM      6  HB1 TYR     HB2 -> HB1
+ATOM      7  HB2 TYR     HB3 -> HB2
+ATOM      8  CG  TYR    
+ATOM      9  CD1 TYR     CD -> CD1 (bei dyrk nicht nötig!)
+ATOM     10  HD1 TYR    
+ATOM     11  CE1 TYR    
+ATOM     12  HE1 TYR    
+ATOM     13  CZ  TYR    
+ATOM     14  OH  TYR    
+ATOM     15  HH  TYR    
+ATOM     16  CD2 TYR   
+ATOM     17  HD2 TYR    
+ATOM     18  CE2 TYR    
+ATOM     19  HE2 TYR    
+ATOM     20  C   TYR    
+ATOM     21  O   TYR    
+
+###########################################
+___GLY:___
+
+
+ATOM      1  N   GLY   
+ATOM      2  HN  GLY     H -> HN
+ATOM      3  CA  GLY   
+ATOM      4  HA1 GLY     HA2 -> HA1
+ATOM      5  HA2 GLY     HA3 -> HA2
+ATOM      6  C   GLY   
+ATOM      7  O   GLY 
+
+###########################################
+___PHE:___
+
+ATOM      1  N   PHE
+ATOM      2  HN  PHE     H -> HN
+ATOM      3  CA  PHE
+ATOM      4  HA  PHE
+ATOM      5  CB  PHE
+ATOM      6  HB1 PHE     HB2 -> HB1
+ATOM      7  HB2 PHE     HB3 -> HB2
+ATOM      8  CG  PHE
+ATOM      9  CD1 PHE     CD -> CD1 (bei dyrk nicht nötig)
+ATOM     10  HD1 PHE
+ATOM     11  CE1 PHE
+ATOM     12  HE1 PHE
+ATOM     13  CZ  PHE
+ATOM     14  HZ  PHE
+ATOM     15  CD2 PHE
+ATOM     16  HD2 PHE
+ATOM     17  CE2 PHE
+ATOM     18  HE2 PHE
+ATOM     19  C   PHE
+ATOM     20  O   PHE
+
+
+###########################################
+___ARG:___
+
+ATOM      1  N   ARG  
+ATOM      2  HN  ARG     H -> HN
+ATOM      3  CA  ARG  
+ATOM      4  HA  ARG  
+ATOM      5  CB  ARG  
+ATOM      6  HB1 ARG     HB2 -> HB1
+ATOM      7  HB2 ARG     HB3 -> HB2
+ATOM      8  CG  ARG  
+ATOM      9  HG1 ARG     HG2 -> HG1
+ATOM     10  HG2 ARG     HG3 -> HG2
+ATOM     11  CD  ARG  
+ATOM     12  HD1 ARG     HD2 -> HD1 
+ATOM     13  HD2 ARG     HD3 -> HD2
+ATOM     14  NE  ARG  
+ATOM     15  HE  ARG  
+ATOM     16  CZ  ARG  
+ATOM     17  NH1 ARG  
+ATOM     18 HH11 ARG  
+ATOM     19 HH12 ARG  
+ATOM     20  NH2 ARG  
+ATOM     21 HH21 ARG  
+ATOM     22 HH22 ARG  
+ATOM     23  C   ARG  
+ATOM     24  O   ARG 
+
+
+###########################################
+___LEU:___
+
+ATOM      1  N   LEU  
+ATOM      2  HN  LEU     H -> HN
+ATOM      3  CA  LEU  
+ATOM      4  HA  LEU  
+ATOM      5  CB  LEU  
+ATOM      6  HB1 LEU     HB2 -> HB1
+ATOM      7  HB2 LEU     HB3 -> HB2
+ATOM      8  CG  LEU  
+ATOM      9  HG  LEU  
+ATOM     10  CD1 LEU     CD -> CD1 (bei dyrk nicht nötig)
+ATOM     11 HD11 LEU  
+ATOM     12 HD12 LEU  
+ATOM     13 HD13 LEU  
+ATOM     14  CD2 LEU  
+ATOM     15 HD21 LEU  
+ATOM     16 HD22 LEU  
+ATOM     17 HD23 LEU  
+ATOM     18  C   LEU  
+ATOM     19  O   LEU
+
+
+###########################################
+___HIS:___  !!! HIS -> HSE !!!
+
+ATOM      1  N   HSE  
+ATOM      2  HN  HSE     H -> HN
+ATOM      3  CA  HSE  
+ATOM      4  HA  HSE  
+ATOM      5  CB  HSE  
+ATOM      6  HB1 HSE     HB2 -> HB1
+ATOM      7  HB2 HSE     HB3 -> HB2
+ATOM      8  ND1 HSE  
+ATOM      9  CG  HSE  
+ATOM     10  CE1 HSE
+ATOM     11  HE1 HSE
+ATOM     12  NE2 HSE 
+ATOM     13  HE2 HSE  
+ATOM     14  CD2 HSE 
+ATOM     15  HD2 HSE   
+ATOM     16  C   HSE  
+ATOM     17  O   HSE 
+
+
+###########################################
+___ALA:___
+
+ATOM      1  N   ALA   
+ATOM      2  HN  ALA     H -> HN
+ATOM      3  CA  ALA   
+ATOM      4  HA  ALA   
+ATOM      5  CB  ALA   
+ATOM      6  HB1 ALA   
+ATOM      7  HB2 ALA   
+ATOM      8  HB3 ALA   
+ATOM      9  C   ALA   
+ATOM     10  O   ALA 
+
+
+###########################################
+___CYS:___
+
+ATOM      1  N   CYS     
+ATOM      2  HN  CYS     H -> HN
+ATOM      3  CA  CYS  
+ATOM      4  HA  CYS   
+ATOM      5  CB  CYS   
+ATOM      6  HB1 CYS     HB2 -> HB1
+ATOM      7  HB2 CYS     HB3 -> HB2
+ATOM      8  SG  CYS   
+ATOM      9  HG1 CYS     HG -> HG1
+ATOM     10  C   CYS   
+ATOM     11  O   CYS
+
+
+###########################################
+___ASN:___
+
+ATOM      1  N   ASN   
+ATOM      2  HN  ASN     H -> HN
+ATOM      3  CA  ASN   
+ATOM      4  HA  ASN   
+ATOM      5  CB  ASN   
+ATOM      6  HB1 ASN     HB2 -> HB1
+ATOM      7  HB2 ASN     HB3 -> HB2
+ATOM      8  CG  ASN   
+ATOM      9  OD1 ASN   
+ATOM     10  ND2 ASN   
+ATOM     11 HD21 ASN   
+ATOM     12 HD22 ASN   
+ATOM     13  C   ASN   
+ATOM     14  O   ASN 
+
+
+###########################################
+___TRP:___
+
+ATOM      1  N   TRP   
+ATOM      2  HN  TRP     H -> HN
+ATOM      3  CA  TRP   
+ATOM      4  HA  TRP   
+ATOM      5  CB  TRP   
+ATOM      6  HB1 TRP     HB2 -> HB1
+ATOM      7  HB2 TRP     HB3 -> HB2
+ATOM      8  CG  TRP   
+ATOM      9  CD1 TRP     CD -> CD1 (bei dyrk nicht nötig)
+ATOM     10  HD1 TRP   
+ATOM     11  NE1 TRP   
+ATOM     12  HE1 TRP   
+ATOM     13  CE2 TRP   
+ATOM     14  CD2 TRP   
+ATOM     15  CE3 TRP   
+ATOM     16  HE3 TRP   
+ATOM     17  CZ3 TRP   
+ATOM     18  HZ3 TRP   
+ATOM     19  CZ2 TRP   
+ATOM     20  HZ2 TRP   
+ATOM     21  CH2 TRP   
+ATOM     22  HH2 TRP   
+ATOM     23  C   TRP   
+ATOM     24  O   TRP
+
+
+###########################################
+___ASP:___
+
+ATOM      1  N   ASP   
+ATOM      2  HN  ASP     H -> HN
+ATOM      3  CA  ASP   
+ATOM      4  HA  ASP   
+ATOM      5  CB  ASP   
+ATOM      6  HB1 ASP     HB2 -> HB1
+ATOM      7  HB2 ASP     HB3 -> HB2
+ATOM      8  CG  ASP   
+ATOM      9  OD1 ASP   
+ATOM     10  OD2 ASP   
+ATOM     11  C   ASP   
+ATOM     12  O   ASP 
+
+
+###########################################
+___MET:___
+ATOM      1  N   MET   
+ATOM      2  HN  MET     H -> HN
+ATOM      3  CA  MET   
+ATOM      4  HA  MET   
+ATOM      5  CB  MET   
+ATOM      6  HB1 MET     HB2 -> HB1
+ATOM      7  HB2 MET     HB3 -> HB2
+ATOM      8  CG  MET   
+ATOM      9  HG1 MET     HG2 -> HG1
+ATOM     10  HG2 MET     HG3 -> HG2
+ATOM     11  SD  MET   
+ATOM     12  CE  MET   
+ATOM     13  HE1 MET   
+ATOM     14  HE2 MET   
+ATOM     15  HE3 MET   
+ATOM     16  C   MET   
+ATOM     17  O   MET 
+
+
+###########################################
+___ILE:___
+
+ATOM      1  N   ILE   
+ATOM      2  HN  ILE     H -> HN
+ATOM      3  CA  ILE   
+ATOM      4  HA  ILE   
+ATOM      5  CB  ILE   
+ATOM      6  HB  ILE   
+ATOM      7  CG2 ILE   
+ATOM      8 HG21 ILE   
+ATOM      9 HG22 ILE   
+ATOM     10 HG23 ILE   
+ATOM     11  CG1 ILE   
+ATOM     12 HG11 ILE     HG12 -> HG11
+ATOM     13 HG12 ILE     HG13 -> HG12
+ATOM     14  CD  ILE   
+ATOM     15  HD1 ILE     HD11 -> HD1
+ATOM     16  HD2 ILE     HD12 -> HD2
+ATOM     17  HD3 ILE     HD13 -> HD3
+ATOM     18  C   ILE   
+ATOM     19  O   ILE
+
+
+
+###########################################
+___GLU:___
+
+ATOM      1  N   GLU   
+ATOM      2  HN  GLU     H -> HN
+ATOM      3  CA  GLU   
+ATOM      4  HA  GLU   
+ATOM      5  CB  GLU   
+ATOM      6  HB1 GLU     HB2 -> HB1
+ATOM      7  HB2 GLU     HB3 -> HB2
+ATOM      8  CG  GLU   
+ATOM      9  HG1 GLU     HG2 -> HG1
+ATOM     10  HG2 GLU     HG3 -> HG2
+ATOM     11  CD  GLU   
+ATOM     12  OE1 GLU   
+ATOM     13  OE2 GLU   
+ATOM     14  C   GLU   
+ATOM     15  O   GLU
+
+
+###########################################
+
+
+
+
+
+

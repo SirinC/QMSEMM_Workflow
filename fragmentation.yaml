@@ -1,0 +1,28 @@
+#==============================================================================================
+#                  Fragmentation
+#==============================================================================================
+job_title: '| 1 | FRAGMENTATION'
+interface: qmmm
+job: optimize
+geometry: 02_Pdb/1pzk.pdb
+qmmm_core: '%same_residue(%within(5; :104))'
+qmmm_embedding: mechanical
+qmmm_charges_around_links: 0
+qmmm_geometry_only: yes 
+qmmm_qmregion_file: Results/QM_Region.pdb
+qmmm_cut_bonds:
+  - {bond: 144-142, link_ratio: 0.729, link_type: HL}
+  - {bond: 223-225, link_ratio: 0.729, link_type: HL}
+  - {bond: 786-784, link_ratio: 0.729, link_type: HL}
+  - {bond: 799-801, link_ratio: 0.729, link_type: HL}
+  - {bond: 849-847, link_ratio: 0.729, link_type: HL}
+  - {bond: 900-902, link_ratio: 0.729, link_type: HL}
+  - {bond: 925-923, link_ratio: 0.729, link_type: HL}
+  - {bond: 940-942, link_ratio: 0.729, link_type: HL}
+  - {bond: 1390-1388, link_ratio: 0.729, link_type: HL}
+  - {bond: 1412-1414, link_ratio: 0.729, link_type: HL}
+  - {bond: 1428-1426, link_ratio: 0.729, link_type: HL}
+  - {bond: 1462-1464, link_ratio: 0.729, link_type: HL}
+  - {bond: 1509-1507, link_ratio: 0.729, link_type: HL}
+  - {bond: 1517-1519, link_ratio: 0.729, link_type: HL}
+#==============================================================================================

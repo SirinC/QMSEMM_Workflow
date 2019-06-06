@@ -1,0 +1,101 @@
+#==============================================================================================
+#                    CHARMM
+#==============================================================================================
+job_title: '  | CHARMM |  '
+job: multistep
+print: [timing]
+steps:
+  - extract
+  - numb
+  - atomcount
+  - optimize
+  - delete
+  - update
+  - grep
+
+# |0| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+calculation_common:
+  interface: charmm
+  job_cleanup: no
+  geometry_write_format: pdb
+  history_file: Results/history_charmm.xyz
+  history_freq: 1
+  maxcycles: 600        #default 200
+  opt_auto_restart: yes
+  opt_quality: 1.0       #optimization quality
+  opt_convlimit_e: 0.06
+  opt_convlimit_max_g: 0 #default 1.2
+  opt_convlimit_rms_g: 0 #default 0.6
+  charmm_exe: /home/bioinfo/Charmm/charmm/exec/gnu/charmm
+  charmm_ff_paths:
+    - /home/bioinfo/Charmm/charmm/toppar/
+  charmm_ff_top: top_all36_prot.rtf
+  charmm_ff_par: par_all36_prot.prm
+  existing_calc_dir: recreate
+  step_title_decoration: "~"
+  
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+calculation_Define:
+  interface: void
+  geometry: &inpt 02_Pdb/1pzk.pdb
+  selection: &sele '%not( :104)'
+  geometry: &region 'Results/QM_Region.pdb'
+
+# |1| -- generate pdb for simulation
+calculation_extract:
+  step_title: ' |1| CHARMM - generate pdb'
+  job: geometry
+  geometry: *inpt
+  selection: *sele
+  geometry_write: Results/charmm_selection.pdb
+
+
+# |2| -- renumber pdb
+calculation_numb:
+  step_title: ' |2| CHARMM - renumber PDB'
+  job: geometry
+  geometry_action: pdb_renumber 
+  geometry: Results/charmm_selection.pdb
+  geometry_write: Results/charmm_selection.pdb  
+ 
+
+# |3| -- counting atoms in selection
+calculation_atomcount:
+  step_title: '|3| CHARMM - counting atoms in selection'
+  job: geometry
+  geometry: Results/charmm_selection.pdb
+  geometry_action: element_counts
+
+
+# |4| -- optimization of geometry
+calculation_optimize:
+  step_title: ' |4| CHARMM - optimize structure'
+  job: optimize
+  optimize_region: "%not(%atomname(HL))"
+  geometry: Results/charmm_selection.pdb
+  restart_file: Results/charmm_optimized.pdb
+  optimize_print: [steps_as_dots,final_energy]
+
+  
+# |5| -- update PDB - delete HL
+calculation_delete:
+  step_title: ' |5| Shellscript - delete Link-Atoms HL'
+  job: shell_script
+  shell_commands: sed -i '/\<HL\>/d' Results/charmm_optimized.pdb  
+
+  
+# |6| -- update optimized pdb
+calculation_update:
+  step_title: ' |6| CHARMM - update'
+  job: geometry
+  geometry: *inpt # Original geometry
+  geometry2: Results/charmm_optimized.pdb # New geometry
+  geometry_action: partial_pdb_update
+  geometry_write: Results/UPDATE_mm.pdb
+
+  
+# |7| -- grep energy of every cycle
+calculation_grep:
+  step_title: ' |7| Shellscript - grep Energy in energy.txt'
+  job: shell_script
+  shell_commands: grep -i 'Cycle' Results/history_charmm.xyz >> Results/charmm_energy.txt

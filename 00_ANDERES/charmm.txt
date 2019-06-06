@@ -1,0 +1,15 @@
+
+Terminal patch residue 	Conventional name
+NTER 	standard N-terminus
+NNEU 	neutral N-terminus
+GLYP 	glycine N-terminus
+PROP 	proline N-Terminus
+ACE 	acetylated N-terminus
+ACP 	acetylated N-terminus
+CTER 	standard C-terminus
+CNEU 	neutral C-terminus
+CT1 	methylated C-terminus
+CT2 	amidated C-terminus
+CT3 	methylamidated C-terminus
+5TER 	5'-terminal hydroxyl patch
+3TER 	3'-terminal hydroxyl patch

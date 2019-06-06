@@ -1,0 +1,92 @@
+#==============================================================================================
+#                   MOPAC
+#==============================================================================================
+job_title: '  | MOPAC |  '
+job: multistep
+print: [timing]
+steps:
+  - atomcount
+  - optimize
+  - delete
+  - update
+  - grep
+  
+
+  
+  
+# |0| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+calculation_common:
+  interface: mopac
+  job_cleanup: no
+  geometry_write_format: pdb
+  history_file: Results/history_mopac.xyz
+  history_freq: 1
+  parallel: 4         
+  maxcycles: 400        #default 200
+  opt_auto_restart: yes
+  opt_quality: 0.1       #optimization quality
+  opt_convlimit_e: 0.006
+  opt_convlimit_max_g: 0 #default 1.2
+  opt_convlimit_rms_g: 0 #default 0.6
+  existing_calc_dir: recreate
+  step_title_decoration: "~"
+ 
+
+ 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+calculation_Define:
+  interface: void
+  job: geometry
+  geometry: &inpt 02_Pdb/1pzk.pdb
+  selection: &sele '%same_residue(%within(5; :104))|%atomname(HL)'
+  geometry: &region 'Results/QM_Region.pdb'
+
+  
+# |1| -- counting atoms in selection
+calculation_atomcount:
+  step_title: '|1| MOPAC - counting atoms in selection'
+  job: geometry
+  geometry: *region
+  geometry_action: element_counts
+
+
+# |2| -- optimization of geometry
+calculation_optimize:
+  step_title: ' |2| MOPAC - optimize structure'
+  job: optimize
+  geometry: *region
+  selection: *sele
+  optimize_region: "%not(%atomname(HL))"
+  method: pm6
+  mopac_precise: yes
+  mopac_corrections: d3h4x #modifiers: dispersion3, h_bonds4, x
+  opt_quality: 0.1
+  opt_convlimit_e: 0.006 #Convergence limit for energy change between steps (kcal/mol)
+  modifiers: dispersion3, h_bonds4, x_bond
+  charge: 1   #default 0
+  restart_file: Results/mopac_optimized.pdb
+  optimize_print: [steps_as_dots,final_energy]
+
+
+# |3| -- update PDB - delete HL
+calculation_delete:
+  step_title: ' |3| Shellscript - delete Link-Atoms HL'
+  job: shell_script
+  shell_commands: sed -i '/\<HL\>/d' Results/mopac_optimized.pdb
+  
+  
+# |4| -- update original pdb with optimize
+calculation_update:
+  step_title: ' |4| MOPAC - update original pdb'
+  job: geometry
+  geometry: *inpt # Original geometry
+  geometry2: Results/mopac_optimized.pdb # New geometry
+  geometry_action: partial_pdb_update
+  geometry_write: Results/UPDATE.pdb
+
+  
+# |5| -- grep energy of every cycle
+calculation_grep:
+  step_title: ' |5| Shellscript - grep Energy in energy.txt'
+  job: shell_script
+  shell_commands: grep -i 'Cycle' Results/history_mopac.xyz >> Results/mopac_energy.txt
